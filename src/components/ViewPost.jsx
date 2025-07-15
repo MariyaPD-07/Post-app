@@ -22,41 +22,39 @@ const ViewPost = () => {
     <div className="row">
         <div className="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12">
 <div className="row g-3">
-{PostData.map(
-    (value,index)=>{
-        return( <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <table class="table">
-  
+ <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+           <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">User Id</th>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+    </tr>
+  </thead>
   <tbody>
+   {PostData.map(
+    (value,index)=>{
+      return(
+     
     <tr>
-      <th scope="row">User ID</th>
+      <th scope="row">1</th>
       <td>{value.userId}</td>
-      
-    </tr>
-    <tr>
-      <th scope="row">ID</th>
       <td>{value.id}</td>
-      
-    </tr>
-    <tr>
-      <th scope="row">Title</th>
       <td>{value.title}</td>
-      
-    </tr>
-
- <tr>
-      <th scope="row">Body</th>
       <td>{value.body}</td>
-      
     </tr>
+    
+         
+      )
+    }
+   )}
 
+    
   </tbody>
 </table>
         </div>
 
-        )
-    }
-)}
 
    
 </div>
